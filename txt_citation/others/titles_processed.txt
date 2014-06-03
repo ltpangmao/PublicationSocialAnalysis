@@ -1,0 +1,20 @@
+Intention-oriented modelling support for socio-technical driven elastic cloud applications
+From KAOS to RBAC: A Case Study in Designing Access Control Rules from a Requirements Analysis
+Computational alignment of goals and scenarios for complex systems
+The role of NFRs when transforming i* requirements models into OO-method models
+On the use of metamodeling for relating requirements and architectural design decisions
+Goal-Based Domain Modeling as a Basis for Cross-Disciplinary Systems Engineering
+Towards Ontology-Based MAS Methodologies: Ontology-Based Early Requirements
+Extension of the Goal-Decision-Information approach to ensure quality in data warehouse development using software agent
+A methodological approach toward the refinement problem in policy-based management systems
+Intention-oriented modelling support for GORE in elastic cloud applications
+Requirements for a Value-Focused EPC: the "WHAT" Dimension
+Deriving software architectural models from requirements models for adaptive systems: the STREAM-A approach
+On the symbiosis of aspect-oriented requirements and architectural descriptions
+Ten Years Plus with EKD: Reflections from Using an Enterprise Modeling Method in Practice
+Analyzing the relations between strategic and operational aspects of an enterprise: towards an ontology-based approach 
+Managing Changes with Legacy Security Engineering Processes
+Ontology-Based Transformation Framework from Tropos to AORML
+Supporting Decision-Making for Self-Adaptive Systems: From Goal Models to Dynamic Decision Networks
+
+

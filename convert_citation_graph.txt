@@ -1,0 +1,9 @@
+/Users/litong30/research/Trento/Workspace/AuthorDiagram
+
+
+
+twopi -Tpdf citation_diagram.gv -o citation_diagram.pdf
+
+
+
+twopi -Tpdf /Users/litong30/research/Trento/Workspace/AuthorDiagram/citation_diagram.gv -o /Users/litong30/research/Trento/Workspace/AuthorDiagram/citation_diagram.pdf
