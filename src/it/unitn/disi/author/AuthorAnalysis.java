@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class AuthorAnalysis {
 
 	public static String name_separator = "_";
-	public static int author_threshold = 3;
+	public static int author_threshold = 1;
 
 	public static void main(String[] args) throws Throwable {
 
@@ -25,8 +25,10 @@ public class AuthorAnalysis {
 		while ((line = br.readLine()) != null) {
 			// remove empty lines
 			if (!line.equals("")) {
+//				line = line.toLowerCase();
 				Record new_record = new Record(line);
 				records.add(new_record);
+				// single author is not well treated here, we need pre-process single author
 				// tackle lines separated by ";"
 				if (line.indexOf(";") > -1) {
 					String temp[] = line.split(";");
@@ -36,7 +38,9 @@ public class AuthorAnalysis {
 
 						new_record.contained_authors.add(new_author);
 					}
-				} else if (line.indexOf(",") > -1) {
+				}
+				// otherwise separate authors by ","
+				else if (line.indexOf(",") > -1) {
 					String temp[] = line.split(",");
 					for (String s : temp) {
 						Author new_author = new Author(s);
@@ -44,6 +48,13 @@ public class AuthorAnalysis {
 
 						new_record.contained_authors.add(new_author);
 					}
+				}
+				else{
+					// add single author
+					Author new_author = new Author(line);
+					authors.add(new_author);
+					new_record.contained_authors.add(new_author);
+					//System.out.println("missing" + line);
 				}
 				i++;
 			}
@@ -72,7 +83,7 @@ public class AuthorAnalysis {
 
 		LinkedList<AuthorSet> author_sets = new LinkedList<AuthorSet>();
 		//facilitate analysis
-		LinkedList<String> author_last_names = new LinkedList<String>();
+		LinkedList<String> author_last_name_1first = new LinkedList<String>();
 		boolean added = false;
 		/** finally cluster authors
 		 *  Each cluster stands for a unique author, and its size indicate the number of publications 
@@ -80,10 +91,11 @@ public class AuthorAnalysis {
 		 */
 		String id = "";
 		for (Author a : authors) {
+			System.out.println(a.first_name+"***"+a.last_name);
 			if (a.last_name != null) {
-				id = a.first_name.charAt(0) + name_separator + a.last_name; 
-				if (!author_last_names.contains(id)) {
-					author_last_names.add(id);
+				id = a.first_name.charAt(0) + name_separator + a.last_name;
+				if (!author_last_name_1first.contains(id)){
+					author_last_name_1first.add(id);
 
 					AuthorSet new_author_set = new AuthorSet();
 					new_author_set.identity = id;
@@ -115,7 +127,7 @@ public class AuthorAnalysis {
 		}
 
 		LinkedList<AuthorRelation> ars = new LinkedList<AuthorRelation>();
-		//calculate co-author relations between big author set (we set the throughold as 2 )
+		//calculate co-author relations between big author sets (the author threshold can be customized)
 		for (Record rec : records) {
 			for (Author au1 : rec.contained_authors) {
 				for (Author au2 : rec.contained_authors) {
@@ -142,11 +154,17 @@ public class AuthorAnalysis {
 			}
 		}
 
+		
+		/****
+		 * For less nodes (3), voronoi + neato is better
+		 * For more nodes (1), neato is much faster than fdp, but later has better result
+		 * scalexy is better
+		 ****/
 		// create files
 		String author_graph = "graph G {\n" + "overlap = scalexy;\n" + "splines=true;\n";
-		//				+ "ranksep = 0.5;"
-		//				+ "sep=\"+1,1\";"
-		//				+ "nodesep=1.0;\n";//voronoi, scalexy, compress, false
+//						+ "ranksep = 0.5;";
+//						+ "sep=\"100,100\";";
+		//				+ "nodesep=1.0;\n";   //voronoi, scalexy, compress, false
 		//add authors with customized properties
 		String shown_label = "";
 		for (AuthorSet as : author_sets) {

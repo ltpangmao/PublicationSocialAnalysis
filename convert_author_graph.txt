@@ -1,6 +1,4 @@
-/Users/litong30/Trento/Workspace/research/AuthorDiagram
-
-
+/Users/litong30/research/Trento/Workspace/AuthorDiagram
 fdp -Tpdf author_diagram.gv -o author_diagram.pdf
 
 

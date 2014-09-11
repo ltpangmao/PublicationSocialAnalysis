@@ -19,8 +19,9 @@ import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class CitationAnalysis {
-	
-	
+	public int redundancy_difference = 3;
+	public int redundancy_length_low = 10;
+	public int redundancy_length_high = 15;
 	
 
 	public static void main(String[] args) throws IOException {
@@ -32,8 +33,8 @@ public class CitationAnalysis {
 		 * Pre-processing on the citation documents
 		 ****************/
 		//import the set of paper that are to be analyzed
-//		ca.paper_set = ca.importPaperTitle("txt_citation/titles_processed_can.txt");
-//		ca.paper_set = ca.importPaperTitle("txt_citation/others/titles_init.txt");
+//		paper_set = ca.importPaperTitle("txt_citation/test.txt");
+//		paper_set = ca.importPaperTitle("txt_citation/verified_titles.txt");
 		
 		// check out whether there are redundant papers in the given paper list.
 //		ca.checkRedundancy(paper_set);
@@ -110,7 +111,7 @@ public class CitationAnalysis {
 			for (count_2 = 0; count_2 < set.size(); count_2++) {
 				Paper paper_2 = set.get(count_2);
 				String search = paper_2.title;
-				if (count_1 != count_2 && findSimilarByWords(title, search, 1)) {
+				if (count_1 != count_2 && findSimilarByWords(title, search, redundancy_difference, redundancy_length_low, redundancy_length_high)) {
 					MutablePair<Integer, Integer> pair = new MutablePair<Integer, Integer>();
 					pair.left = count_1;
 					pair.right = count_2;
@@ -147,21 +148,24 @@ public class CitationAnalysis {
 	}
 	
 	/**
+	 * show matched and unmatched papers
 	 * generate an additional documents which contains the citation information regarding to our selected papers.
 	 * @param set
 	 * @throws IOException
 	 */
 	public void prepareSelectedCitationDocument(LinkedList<Paper> set) throws IOException{
 		// read the DBLP data set
-		File file = new File("/Users/litong30/Desktop/DBLP_Citation_2014_May/publications.txt");   
+		File file = new File("/Users/litong30/research/Trento/Other files/DBLP_Citation_2014_May/publications.txt");   
 		BufferedInputStream fis = new BufferedInputStream(new FileInputStream(file));    
 		BufferedReader reader = new BufferedReader(new InputStreamReader(fis,"utf-8"), 5*1024*1024);  
 
 		String line = "";
-		String output="";
+		String output_matched="";
+		String output_unmatched="";
 		
 		Boolean extract_info = false;
-		LinkedList<Paper> temp_set = new LinkedList<Paper>();
+		LinkedList<Paper> matched_set = new LinkedList<Paper>();
+		LinkedList<Paper> unmatched_set = new LinkedList<Paper>();
 		while ((line = reader.readLine()) != null) {
 			if(set.size() == 0 && extract_info == false){
 				break;
@@ -174,34 +178,46 @@ public class CitationAnalysis {
 						extract_info = true;
 						paper.found = true;
 						
-						temp_set.add(paper);
-						set.remove(paper);
+						matched_set.add(paper);
+						set.remove(paper); // to accelerate 
 						break;
 					}
 				}
 			}
 			if(extract_info == true){
-				temp_set.getLast().found_paper += line + "\n";
+				matched_set.getLast().found_paper += line + "\n";
 			}
 		}
 
+		String output_paper_info = "";
 		int count=0;
-		for(Paper paper: temp_set){
-			// output info of found papers
-			if(paper.found == true){
-				output+=paper.found_paper;
-				count++;
-			}
+		for(Paper paper: matched_set){
+			// output title of found papers
+			output_matched+=paper.title+"\n";
+			// output full information of found papers
+			output_paper_info += paper.found_paper;
+			// record the matched number
+			count++;
+		}
+		// output info of papers that are not found
+		for(Paper paper: set){
+			output_unmatched += paper.title+"\n";
 		}
 		
-		System.out.println(output);
+		System.out.println(output_matched+"\n\n\n\n\n\n"+output_unmatched);
 		System.out.println(count);
 		
-		String output_file = "txt/selected_papers_info.txt";
+		// output titles
+		String output_file = "txt_citation/match_result.txt";
 		PrintWriter writer = new PrintWriter(output_file, "UTF-8");
-		writer.println(output);
+		writer.println(output_matched+"\n\n\n\n\n\n"+output_unmatched);
 		writer.close();
-
+		
+		// output info
+		output_file = "txt_citation/selected_papers_info.txt";
+		PrintWriter writer2 = new PrintWriter(output_file, "UTF-8");
+		writer2.println(output_paper_info);
+		writer2.close();
 	}
 
 	/**
@@ -211,10 +227,10 @@ public class CitationAnalysis {
 	 */
 	public void analyzeGivenPaperSet(LinkedList<Paper> set) throws IOException{
 		// read the DBLP data set
-		File file = new File("/Users/litong30/Desktop/DBLP_Citation_2014_May/publications.txt");   
+		File file = new File("/Users/litong30/research/Trento/Other files/DBLP_Citation_2014_May/publications.txt");   
 		BufferedInputStream fis = new BufferedInputStream(new FileInputStream(file));    
 		BufferedReader reader = new BufferedReader(new InputStreamReader(fis,"utf-8"), 5*1024*1024);  
-
+		
 		String line = "";
 		String output="";
 		
@@ -224,7 +240,7 @@ public class CitationAnalysis {
 			}
 			if (line.startsWith("#*")) { //only analyze the title line
 				for (Paper paper : set) {
-					if(line.toLowerCase().contains(paper.title.toLowerCase())){
+					if(line.toLowerCase().contains(paper.title.trim().toLowerCase())){
 //					if(ca.findSimilarByWords(line, paper.title, 3)){
 //					if(ca.findSimilarIgnoreMarks(line, paper.title)){
 						System.out.println(paper.title);
@@ -253,6 +269,7 @@ public class CitationAnalysis {
 			}
 		}
 		
+		System.out.println("\n\n\n\n\n\n\n\n\n\n");
 		System.out.println(output);
 		System.out.println(count);	
 	}
@@ -265,11 +282,18 @@ public class CitationAnalysis {
 	 * @param search
 	 * @return
 	 */
-	private boolean findSimilarByWords(String title, String search, int difference){
+	private boolean findSimilarByWords(String title, String search, int difference, int low, int high){
 		title = title.toLowerCase();
 		search = search.toLowerCase();
 		
+		
 		String [] temp_set = search.split(" ");
+		String [] temp_set2 = title.split(" ");
+		//first verify the length of paper to be valid
+		if(temp_set.length<low || temp_set.length>high || temp_set2.length<low || temp_set2.length>high){
+			return false;
+		}
+		
 		int hit_count = 0;
 		int allowed_difference = difference;
 		for (String temp: temp_set){
@@ -407,6 +431,7 @@ public class CitationAnalysis {
 
 	public void drawCitationGraph(LinkedList<Paper> paper_set) throws IOException {
 		// create files
+		// use fdp
 		String author_graph = "digraph G {\n" + "overlap = voronoi;\n" + "splines=true;\n"
 //						+ "nodesep=2.0;\n"
 						+ "sep = 0.3;\n";//voronoi, scalexy, compress, false

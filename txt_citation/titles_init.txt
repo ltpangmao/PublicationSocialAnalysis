@@ -1,0 +1,243 @@
+Intention-oriented modelling support for socio-technical driven elastic cloud applications
+Adding flexibility using structured goals: the case of itinerant mobile agents
+From KAOS to RBAC: A Case Study in Designing Access Control Rules from a Requirements Analysis
+Computational alignment of goals and scenarios for complex systems
+gocc: a configuration compiler for self-adaptive systems using goal-oriented requirements description
+From business models to service-oriented design: a reference catalog approach
+A model-driven goal-oriented requirement engineering approach for data warehouses
+The role of NFRs when transforming i* requirements models into OO-method models
+Analysis of multi-agent systems based on KAOS modeling
+Towards requirements-driven autonomic systems design
+From stakeholder goals to product features: towards a role-based variability framework with decision boundary
+Automated Mapping from Goal Models to Self-Adaptive Systems
+Requirements variability models: meta-model based transformations
+Strategically balanced process adoption
+High variability design for software agents: Extending Tropos
+Learning operational requirements from goal models
+Goal-oriented approach to creating class diagrams with OCL constraints
+On the use of metamodeling for relating requirements and architectural design decisions
+Live goals for adaptive service compositions
+Agent based system development: a domain-specific goal approach
+Product portfolio scope optimization based on features and goals
+Eliciting service composition in a goal driven manner
+IMPULSE: a design framework for multi-agent systems based on model transformation
+GOORE: goal-oriented and ontology driven requirements elicitation method
+An automated approach to monitoring and diagnosing requirements
+A design framework for generating BDI-agents from goal models
+Addressing OWL ontology for goal consistency checking
+Goal and model driven design of an architecture for a care service platform
+Strategic alignment in requirements analysis for organizational IT: an integrated approach
+Towards a Framework to Elicit and Manage Security and Privacy Requirements from Laws and Regulations
+Business Process Design from Virtual Organization Intentional Models
+Towards a Comprehensive Framework for Secure Systems Development
+Requirements-Driven Collaborative Choreography Customization
+Goal-Based Domain Modeling as a Basis for Cross-Disciplinary Systems Engineering
+Towards Model-Based Support for Managing Organizational Transformation
+Mapping Requirement Models to Mathematical Models in Control System Development
+Towards Ontology-Based MAS Methodologies: Ontology-Based Early Requirements
+A Goal-Oriented Software Testing Methodology
+Requirements model generation to support requirements elicitation: the Secure Tropos experience
+Bridging Enterprise Architecture Requirements to ArchiMate
+Generating requirements from systems models using patterns: a case study
+Configuring the Variability of Business Process Models Using Non-Functional Requirements
+Combining i* and BPMN for Business Process Model Lifecycle Management
+Goal-Oriented Patterns for UML-Based Modeling of Embedded Systems Requirements
+Formal analysis and design for engineering security automated derivation of formal software security specifications from goal-oriented security requirements
+A Goal Decomposition Approach for Automatic Mashup Development
+Establishing Regulatory Compliance for Software Requirements
+A Goal-Based Approach to Guide the Design of an Abstract Event-B Specification
+Towards a Model-Driven Approach for Mapping Requirements on AADL Architectures
+Deriving tabular event-based specifications from goal-oriented requirements models
+Analyzing goal semantics for rights, permissions, and obligations
+Fluent-based animation: exploiting the relation between goals and scenarios for requirements validation
+Softgoal Traceability Patterns
+A goal-based approach to policy refinement
+Modelling Requirements Patterns with a Goal and PF Integrated Analysis Approach
+A goal-oriented modeling and implementing approach for collaborative product commerce
+Towards goal-oriented design of agent systems
+From Requirements to Architecture for Software Product Lines
+Selecting mobile office devices using a goal-oriented approach
+Mediating process adaptation through a goal-oriented context-aware approach
+Towards conceptual foundations for service-oriented requirements engineering: bridging requirements and services ontologies
+DaWaRA: An Eclipse Plugin for Using i* on Data Warehouse Requirement Analysis
+Adaptive Goals for Self-Adaptive Service Compositions
+Goal-centric traceability for managing non-functional requirements
+Goal-Oriented, B-Based Formal Derivation of Security Design Specifications from Security Requirements
+Extension of the Goal-Decision-Information approach to ensure quality in data warehouse development using software agent
+Co-evolution of Agent Oriented Conceptual Models and Use Case Diagrams
+Publishing intentional services using extended semantic annotation
+A UML-Based Conversion Tool for Monitoring and Testing Multi-agent Systems
+Integrating Goals and Problem Frames in Requirements Analysis
+An Intentional Perspective to Service Modeling and Discovery
+A Proposed Method for Automated Project Scheduling using Goals and Scenarios
+A Trust-Enabling Support for Goal-Based Services
+Business and IT Alignment with SEAM for Enterprise Architecture
+A methodological approach toward the refinement problem in policy-based management systems
+A Unification of the Essence of Goal-Oriented Requirements Engineering
+Towards anticipating requirements changes through studies of the future
+A Meta-Model for Modelling Law-Compliant Requirements
+A Novel Approach of Requirements Analysis for Agent Based System
+An Integrated Framework for System/Software Requirements Development Aligning with Business Motivations
+Toward intention aware semantic Web service systems
+COSMOD-RE: Supporting the Co-Design of Requirements and Architectural Artifacts
+Synthesis of Actor Dependency and Business Motivation for Service Requirements Engineering
+Supporting a co-operative requirements engineering process
+From goals to aspects: discovering aspects from requirements goal models
+From Early Requirements to Late Requirements Modeling for a Data Warehouse
+Seeking Quality through User-Goal Monitoring
+Representing Security Goals, Policies, and Objects
+Intention-oriented modelling support for GORE in elastic cloud applications
+Automatic Derivation of Utility Functions for Monitoring Software Requirements
+Aspects across Software Life Cycle: A Goal-Driven Approach
+Modeling Approach Using Goal Modeling and Enterprise Architecture for Business IT Alignment
+Linking Goal-Oriented Requirements and Model-Driven Development
+Eliciting Goals for Business Process Models with Non-Functional Requirements Catalogues
+Automated Construction of Process Goal Trees from EPC-Models to Facilitate Extraction of Process Patterns
+A Combined Framework for Development of Business Process Support Systems
+Validation of User Intentions in Process Models
+Aligning goals and services through goal and business modelling
+Requirements for a Value-Focused EPC: the “WHAT” Dimension
+Goal Annotation of Process Models for Semantic Enrichment of Process Knowledge
+Building a Value-Focused EPC: the “HOW” Dimension
+Goal and scenario validation: a fluent combination
+Towards a CMMI-Compliant Goal-Oriented Software Process through Model-Driven Development
+Architecture-Driven Requirements Engineering
+Deriving Acceptance Tests from Goal Requirements
+Modeling Mental States in the Analysis of Multiagent Systems Requirements
+Automatically Generating Requirements from i* Models: Experiences with a Complex Airport Operations System
+An Aspect-Oriented Framework for Business Process Improvement
+Structuring the Co-design of Requirements and Architecture
+Frameworks for Model-Driven Software Architecture
+Deriving event-based transition systems from goal-oriented requirements models
+A Goal-Oriented Requirements Engineering Method for Business Processes
+Aligning Goal and Value Models for Information System Design
+Deriving Non-zeno Behavior Models from Goal Models Using ILP
+Goal-Directed Modeling of Self-adaptive Software Architecture
+i2MAP: An Incremental and Iterative Modeling and Analysis Process
+Integrated Model-Driven Development of Goal-Oriented Data Warehouses and Data Marts
+Goal-Driven Business Process Derivation
+Tracing the Interdependencies between Architecture and Organization in Goal-Oriented Extensible Models
+Towards a Goal Driven Task Personalization Specification Framework
+From GMoDS models to object-oriented specifications in Event-B
+Requirements modeling in SEAM: The example of a car crash management system
+Goal-oriented modeling and verification of feature-oriented product lines
+Capturing consumer preferences as requirements for software product lines
+Goal Oriented Value Object Classification for Healthcare Service Development
+Requirements Refinement and Exploration of Architecture for Security and Other NFRs
+Requirements and architectural approaches to adaptive software systems: A comparative study
+Using goals and customizable services to improve adaptability of process-based service compositions
+GEA: A Goal-Driven Approach toDiscovering Early Aspects
+On the Use of Goal Models and Business Process Models for Elicitation of System Requirements
+Relating Goal Modeling with BPCM Models in a Combined Framework
+A framework for the operationalization of monitoring in business intelligence requirements engineering
+Softgoal-based plan selection in model-driven BDI agents
+Model-Driven Requirements Engineering for Embedded Systems Development
+Goal modeling method for autonomie control of Cyber-Physical Systems (CPS)
+QRA: A Quality Requirements Analysis Approach for Service Systems
+Modeling and Specifying Parametric Adaptation Mechanism for Self-Adaptive Systems
+Combining Goal-Oriented and Problem-Oriented Requirements Engineering Methods
+Continuous KAOS, ASM, and formal control system design across the continuous/discrete modeling interface: a simple train stopping application
+TBIM: A Language for Modeling and Reasoning about Business Plans
+Goal formalization and classification for requirements engineering, fifteen years later
+A requirements-based approach for representing micro-business patterns
+Automatic Tagging of Functional-Goals for Goal-Driven Semantic Service Discovery
+Awareness Requirements
+A Goal Driven Framework for Software Project Data Analytics
+Goal Oriented Variability Modeling in Service-Based Business Processes
+Autonomy requirements engineering: a case study on the Bepi Colombo mission
+Ensuring Consistency among Business Goals and Business Process Models
+A Framework for Combining Problem Frames and Goal Models to Support Context Analysis during Requirements Engineering
+GDIA: Eliciting information requirements in emergency first response
+Xipho: extending tropos to engineer context-aware personal agents
+Engineering of requirements for a distributed teleteaching system: a conceptual graph-based approach
+From i* Requirements Models to Conceptual Models of a Model Driven Development Process 
+Deriving software architectural models from requirements models for adaptive systems: the STREAM-A approach
+From requirements to multi-agent architecture using organisational concepts
+Systematic Integration Between Requirements and Architecture
+From System Goals to Software Architecture
+On the symbiosis of aspect-oriented requirements and architectural descriptions
+Deriving Use Cases from Organizational Modeling
+Goal-Oriented Software Architecting
+From goals to high-variability software design
+Secure Tropos: A Security-Oriented Extension of the Tropos methodology
+Compliance analysis based on a goal-oriented requirement language evaluation methodology
+Aligning Service-Oriented Architectures with Security Requirements
+A method for security governance, risk, and compliance (GRC): a goal-process approach
+Relating business process models to goal-oriented requirements models in kaos
+Requirements-driven design and conguration management of business processes
+From goal-driven security requirements engineering to secure design
+Model-Driven Requirements Engineering: Synchronising Models in an Air Traffic Management Case Study
+Understanding Business Strategies of Networked Value Constellations Using Goal- and Value Modeling
+Ten Years Plus with EKD: Reflections from Using an Enterprise Modeling Method in Practice
+Configuring features with stakeholder goals
+Constructing feature models using goal-oriented analysis
+Goal-driven software product line engineering
+Goal-Oriented Test Case Selection and Prioritization for Product Line Feature Models
+A Goal Oriented Approach to Identify and Configure Feature Models for Software Product Lines
+A Marriage of MDD and Early Aspects in Software Product LineDevelopment
+Introduction to the User Requirements Notation: learning by example. 
+Analyzing the relations between strategic and operational aspects of an enterprise: towards an ontology-based approach 
+Semantic Integration of Goal and Business Process Modelling
+A first attempt to combine SysML requirements diagrams and B
+Tropos: An Agent-Oriented Software Development Methodology
+ARMOR/Light ARMOR (ArchiMate Motivational Extension in ArchiMate 2.0, an Open Group Standard)
+On the Alignment of Goal Models and Business Models
+Extending the EPC and the BPMN with Business Process Goals and Performance Measures. 
+ Goal-Based Business Modeling Oriented Towards Late Requirements Generation. 
+ Business Process-Driven Requirements Engineering: A Goal-Based Approach. 
+Representation and Utilization of Non-Functional Requirements for Information System Design
+Managing Changes with Legacy Security Engineering Processes
+e-Service Design Using i* and e3value Modeling
+A Framework for Modeling Strategy, Business Processes and Information Systems
+Linking Business Goals to Process Models in Semantic Business Process Modeling
+Goal-Oriented Business Process Modeling with EPCs and Value-Focused Thinking
+Mapping Semantically Enriched Formal Tropos to Business Process Models
+Intentional Modeling for Problem Solving in Enterprise Architecture
+Automating Model Transformations in Agent-Oriented Modeling
+Deriving Goals from a Use-Case Based Requirements Specification
+Guiding Goal Modeling Using Scenarios
+From Non-Functional Requirements to Design Through Patterns
+Deriving Operational Software Specifications from System Goals
+Ontology-Based Transformation Framework from Tropos to AORML
+From intentions to code: exploring the life of user goals in two web-based systems. I
+Behavioral adaptation of information systems through goal models. 
+A Requirements-Driven Software Development Methodology
+Requirements engineering for e-business advantage
+An MDE Modeling Framework for Measurable Goal-Oriented Requirements
+Exploring Web Services from a Business Value Perspective
+Towards a classification of Web service feature interactions
+From goal-oriented requirements to Event-B specifications
+Formal specification generator for KAOS: model transformation approach to generate formal specifications from KAOS requirements models
+Mapping i* within UML for Business Modeling
+Supporting Decision-Making for Self-Adaptive Systems: From Goal Models to Dynamic Decision Networks
+Transforming Goal Oriented Requirement Specifications into Architecture Prescriptions
+Goal-Oriented Requirements and Feature Modeling for Software Product Line Engineering
+Tailoring an Aspectual Goal-oriented Approach to Model Features
+PRiM: An i*-based process reengineering method for information systems specification
+A goal-oriented requirements modeling language for enterprise architecture
+Extending enterprise architecture modelling with business goals and requirements
+Using non-functional requirements to systematically select among alternatives in architectural design
+Architectural design to meet stakeholder requirements
+Requirements-Driven Design of Autonomic Application Software
+Configuring Common Personal Software: a Requirements-Driven Approach
+Towards requirements-driven information systems engineering: the Tropos project
+A Goal-Based Organizational Perspective on Multi-agent Architectures
+Reverse engineering goal models from legacy code
+Validating strategic alignment of organizational IT requirements using goal modeling and problem diagrams
+From Requirements to Architectural Design -- Using Goals and Scenarios
+Handling Obstacles in Goal-Oriented Requirements Engineering
+Modeling and Analyzing Non-Functional Requirements in Service Oriented Architecture with the User Requirements Notation
+Towards a Pattern-Based Framework for Goal-Driven Business Process Modeling
+Integrating business strategies with requirement models of legal compliance
+Designing information systems in social context: a goal and scenario modelling approach
+Goal and Scenario Modeling, Analysis, and Transformation with jUCMNav 
+Business process management with the user requirements notation
+Goal skills and preference framework
+On the elements of an enterprise: towards an ontology-based account
+From information system requirements to designs: A mapping framework
+A Framework for Integrating Business Processes and Business Requirements
+From Early Requirements to User Interface Prototyping: A methodological approach
+Semi Automatic Generation of User Interfaces Prototypes from Early Requirements Models
+Goal-Driven Business Process Analysis Application in Electricity Deregulation
+On the notion of softgoals in business process modeling
+Integrating the Goal and Business Process Perspectives in Information System Analysis

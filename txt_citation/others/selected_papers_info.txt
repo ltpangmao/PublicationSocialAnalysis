@@ -1,12 +1,3 @@
-#*ARIS Architecture and Reference Models for Business Process Management.
-#@August-Wilhelm Scheer,Markus Nüttgens
-#t2000
-#cBusiness Process Management
-#index68452
-#% 
-#!
-  
-
 #*Goal-Oriented, B-Based Formal Derivation of Security Design Specifications from Security Requirements.
 #@Riham Hassan,Shawn A. Bohner,Sherif El-Kassas,Mohamed Eltoweissy
 #t2008
@@ -38,6 +29,22 @@
 #%1070911
 #!
   
+#*Automating Model Transformations in Agent-Oriented Modelling.
+#@Anna Perini,Angelo Susi
+#t2005
+#cAOSE
+#index43361
+#%43328
+#%43344
+#%187747
+#%470579
+#%738586
+#%868457
+#%892276
+#%950874
+#%1124400
+#!
+  
 #*Modeling Mental States in the Analysis of Multiagent Systems Requirements.
 #@Alexei Lapouchnian,Yves Lespérance
 #t2006
@@ -55,22 +62,6 @@
 #%1056776
 #!
   
-#*A Goal-Based Organizational Perspective on Multi-agent Architectures.
-#@Manuel Kolp,Paolo Giorgini,John Mylopoulos
-#t2001
-#cATAL
-#index56148
-#%29564
-#%29829
-#%74091
-#%74462
-#%329101
-#%1056776
-#%1120247
-#%3005279
-#%3006332
-#!
-  
 #*A design framework for generating BDI-agents from goal models.
 #@Loris Penserini,Anna Perini,Angelo Susi,Mirko Morandini,John Mylopoulos
 #t2007
@@ -80,12 +71,44 @@
 #%1056776
 #!
   
+#*Requirements-Driven Design and Configuration Management of Business Processes.
+#@Alexei Lapouchnian,Yijun Yu,John Mylopoulos
+#t2007
+#cBPM
+#index68386
+#%177458
+#%362466
+#%558238
+#%558296
+#%558464
+#%653409
+#%1056776
+#%1129039
+#%370747
+#!
+  
 #*Goal-Oriented Business Process Modeling with EPCs and Value-Focused Thinking.
 #@Dina Neiger,Leonid Churilov
 #t2004
 #cBusiness Process Management
 #index68393
 #% 
+#!
+  
+#*A Requirements-Driven Development Methodology.
+#@Jaelson Castro,Manuel Kolp,John Mylopoulos
+#t2001
+#cCAiSE
+#index74091
+#%56113
+#%56022
+#%738718
+#%744548
+#%745153
+#%979746
+#%1056776
+#%3006157
+#%3006809
 #!
   
 #*Representation and Utilization of Non-Functional Requirements for Information System Design.
@@ -132,23 +155,12 @@
 #%1056776
 #!
   
-#*Requirements-driven design of autonomic application software.
-#@Alexei Lapouchnian,Yijun Yu,Sotirios Liaskos,John Mylopoulos
-#t2006
-#cCASCON
-#index77335
-#%172591
-#%183297
-#%362466
-#%558238
-#%558296
-#%558464
-#%653409
-#%806957
-#%1056776
-#%1065711
-#%1129039
-#%1179824
+#*Aligning Goal Models and Business Models - extended abstract.
+#@Birger Andersson,Maria Bergholtz,Ananda Edirisuriya,Jelena Zdravkovic,Tharaka Ilayperuma,Prasad Jayaweera,Paul Johannesson
+#t2008
+#cCAiSE Forum
+#index75076
+#% 
 #!
   
 #*An Intentional Perspective to Service Modeling and Discovery.
@@ -172,14 +184,6 @@
 #t2008
 #cCOMPSAC
 #index113509
-#% 
-#!
-  
-#*A Framework for Integrating Business Processes and Business Requirements.
-#@Raman Kazhamiakin,Marco Pistore,Marco Roveri
-#t2004
-#cEDOC
-#index177458
 #% 
 #!
   
@@ -445,14 +449,6 @@
 #% 
 #!
   
-#*From Early Requirements to User Interface Prototyping: A Methodological Approach.
-#@Alicia Martínez,Hugo Estrada,Juan Sánchez,Oscar Pastor
-#t2002
-#cASE
-#index471693
-#% 
-#!
-  
 #*Formal specification generator for KAOS: model transformation approach to generate formal specifications from KAOS requirements models.
 #@Hiroyuki Nakagawa,Kenji Taguchi,Shinichi Honiden
 #t2007
@@ -526,14 +522,6 @@
 #%1056776
 #!
   
-#*A Goal-based Approach to Policy Refinement.
-#@Arosha K. Bandara,Emil Lupu,Jonathan D. Moffett,Alessandra Russo
-#t2004
-#cPOLICY
-#index545641
-#% 
-#!
-  
 #*From stakeholder goals to product features: towards a role-based variability framework with decision boundary.
 #@Catalin Bidian
 #t2006
@@ -585,14 +573,6 @@
 #% 
 #!
   
-#*Configuring Common Personal Software: a Requirements-Driven Approach.
-#@Sotirios Liaskos,Alexei Lapouchnian,Yiqiao Wang,Yijun Yu,Steve M. Easterbrook
-#t2005
-#cRE
-#index558296
-#% 
-#!
-  
 #*Exploring Web Services from a Business Value Perspective.
 #@Bas van der Raadt,Jaap Gordijn,Eric Yu
 #t2005
@@ -625,14 +605,6 @@
 #% 
 #!
   
-#*Reverse Engineering Goal Models from Legacy Code.
-#@Yijun Yu,Yiqiao Wang,John Mylopoulos,Sotirios Liaskos,Alexei Lapouchnian,Julio Cesar Sampaio do Prado Leite
-#t2005
-#cRE
-#index558461
-#% 
-#!
-  
 #*A Proposed Method for Automated Project Scheduling using Goals and Scenarios.
 #@Akos Szoke
 #t2008
@@ -662,6 +634,14 @@
 #t2006
 #cRE
 #index558559
+#% 
+#!
+  
+#*DaWaRA: An Eclipse Plugin for Usingi* on Data Warehouse Requirement Analysis.
+#@Octavio Glorio,Jesús Pardillo,Jose-Norberto Mazón,Juan Trujillo
+#t2008
+#cRE
+#index558622
 #% 
 #!
   
@@ -718,14 +698,6 @@
 #%774523
 #%1051177
 #%1289288
-#!
-  
-#*Tailoring an Aspectual Goal-oriented Approach to Model Features.
-#@Carla T. L. L. Silva,Fernanda M. R. Alencar,João Araújo,Ana Moreira,Jaelson Brelaz de Castro
-#t2008
-#cSEKE
-#index583169
-#% 
 #!
   
 #*Systematic Integration Between Requirements and Architecture.
@@ -793,28 +765,20 @@
 #% 
 #!
   
-#*Architectural Design to Meet Stakeholder Requirements.
-#@Lawrence Chung,Daniel Gross,Eric S. K. Yu
-#t1999
-#cWICSA
-#index661725
+#*A Marriage of MDD and Early Aspects in Software Product Line Development.
+#@Thaís Vasconcelos Batista,M. Cecilia Bastarrica,Sérgio Soares,Lyrene Fernandes da Silva
+#t2008
+#cSPLC (2)
+#index616410
 #% 
 #!
   
-#*Relating Business Process Models to Goal-Oriented Requirements Models in KAOS.
-#@George Koliadis,Aditya Ghose
-#t2006
-#cPKAW
-#index676799
-#%68192
-#%182767
-#%521568
-#%558283
-#%567628
-#%601217
-#%1071864
-#%1128778
-#%3402327
+#*An Early Requirements Analyzing and Modeling Approach for Collaborative Product Commerce.
+#@Zhi Liu,Tianzhou Wang
+#t2005
+#cCEC Workshops
+#index658843
+#% 
 #!
   
 #*Structuring the Co-design of Requirements and Architecture.
@@ -832,6 +796,14 @@
 #%1128338
 #%1129352
 #%3006157
+#!
+  
+#*Automatically Generating Requirements from Models: Experiences with a Complex Airport Operations System.
+#@Cornelius Ncube,James Lockerbie,Neil A. M. Maiden
+#t2007
+#cREFSQ
+#index694680
+#% 
 #!
   
 #*A Trust-Enabling Support for Goal-Based Services.
@@ -882,6 +854,52 @@
 #%3006157
 #!
   
+#*Deriving event-based transition systems from goal-oriented requirements models.
+#@Emmanuel Letier,Jeff Kramer,Jeff Magee,Sebastián Uchitel
+#t2008
+#cAutom. Softw. Eng.
+#index761109
+#%79330
+#%79503
+#%114400
+#%188055
+#%188170
+#%361685
+#%362039
+#%362404
+#%362268
+#%362517
+#%362506
+#%362466
+#%558283
+#%558433
+#%558284
+#%558564
+#%601217
+#%601160
+#%601218
+#%601180
+#%601095
+#%601216
+#%601444
+#%738586
+#%760975
+#%760972
+#%773279
+#%807588
+#%1051177
+#%1051147
+#%1056776
+#%1124189
+#%1124253
+#%1124217
+#%1127586
+#%1128780
+#%1128778
+#%1128776
+#%3004213
+#!
+  
 #*Requirements model generation to support requirements elicitation: the Secure Tropos experience.
 #@Nadzeya Kiyavitskaya,Nicola Zannone
 #t2008
@@ -919,56 +937,6 @@
 #t2007
 #cInternational Journal of Software Engineering and Knowledge Engineering
 #index920932
-#% 
-#!
-  
-#*Towards requirements-driven information systems engineering: the Tropos project.
-#@Jaelson Castro,Manuel Kolp,John Mylopoulos
-#t2002
-#cInf. Syst.
-#index938328
-#% 
-#!
-  
-#*From information system requirements to designs: a mapping framework.
-#@Lawrence Chung,Panagiotis Katalagarianos,Manolis Marakakis,Michalis Mertikas,John Mylopoulos,Yannis Vassiliou
-#t1991
-#cInf. Syst.
-#index938380
-#% 
-#!
-  
-#*Goal-Driven Business Process Analysis Application in Electricity Deregulation.
-#@Vagelio Kavakli,Pericles Loucopoulos
-#t1999
-#cInf. Syst.
-#index938615
-#% 
-#!
-  
-#*Designing information systems in social context: a goal and scenario modelling approach.
-#@Lin Liu,Eric S. K. Yu
-#t2004
-#cInf. Syst.
-#index938727
-#%43325
-#%362350
-#%362466
-#%558166
-#%558456
-#%558377
-#%1071868
-#%1127648
-#%1128338
-#%1128780
-#%1129632
-#!
-  
-#*Validating strategic alignment of organizational IT requirements using goal modeling and problem diagrams.
-#@Steven J. Bleistein,Karl Cox,June M. Verner
-#t2006
-#cJournal of Systems and Software
-#index995726
 #% 
 #!
   
@@ -1012,55 +980,12 @@
 #% 
 #!
   
-#*Handling Obstacles in Goal-Oriented Requirements Engineering.
-#@Axel van Lamsweerde,Emmanuel Letier
-#t2000
-#cIEEE Trans. Software Eng.
-#index1128778
-#%3334
-#%5698
-#%79239
-#%361839
-#%362470
-#%362915
-#%362971
-#%363069
-#%363018
-#%471499
-#%558314
-#%558285
-#%558326
-#%601160
-#%684546
-#%760950
-#%771058
-#%774523
-#%775588
-#%832441
-#%832506
-#%833251
-#%1051194
-#%1056776
-#%1057099
-#%1118163
-#%1123469
-#%1124405
-#%1124217
-#%1127296
-#%1127298
-#%1128094
-#%1128361
-#%1128485
-#%1128586
-#%1128780
-#%1128757
-#%1128403
-#%1128776
-#%1129039
-#%1129168
-#%1129632
-#%3006276
-#%3006115
+#*E-service design using i* and evalue modeling.
+#@Jaap Gordijn,Eric Yu,Bas van der Raadt
+#t2006
+#cIEEE Software
+#index1072118
+#% 
 #!
   
 #*Guiding Goal Modeling Using Scenarios.
@@ -1115,21 +1040,6 @@
 #%3006157
 #!
   
-#*Towards requirements-driven autonomic systems design.
-#@Alexei Lapouchnian,Sotirios Liaskos,John Mylopoulos,Yijun Yu
-#t2005
-#cACM SIGSOFT Software Engineering Notes
-#index1179824
-#%172591
-#%183297
-#%362466
-#%558238
-#%806957
-#%1056776
-#%1065711
-#%1129039
-#!
-  
 #*From requirements to multi-agent architecture using organisational concepts.
 #@Lúcia R. D. Bastos,Jaelson Castro
 #t2005
@@ -1171,14 +1081,6 @@
 #%1127899
 #%1128780
 #%1129039
-#!
-  
-#*Goal and scenario modeling, analysis, and transformation with jUCMNav.
-#@Gunter Mussbacher,Daniel Amyot
-#t2009
-#cICSE Companion
-#index1210571
-#% 
 #!
   
 #*Towards a Model-Driven Approach for Mapping Requirements on AADL Architectures.
@@ -1233,20 +1135,6 @@
 #cQSIC
 #index1325196
 #% 
-#!
-  
-#*Business process management with the user requirements notation.
-#@Alireza Pourshahid,Daniel Amyot,Liam Peyton,Sepideh Ghanavati,Pengfei Chen,Michael Weiss,Alan J. Forster
-#t2009
-#cElectronic Commerce Research
-#index1336806
-#%558456
-#%567850
-#%793184
-#%892927
-#%938202
-#%938707
-#%938727
 #!
   
 #*Aligning goals and services through goal and business modelling.
@@ -1325,14 +1213,6 @@
 #%2882358
 #!
   
-#*Towards a Pattern-Based Framework for Goal-Driven Business Process Modeling.
-#@Saeed Ahmadi Behnam,Daniel Amyot,Gunter Mussbacher
-#t2010
-#cSERA
-#index2813398
-#% 
-#!
-  
 #*Towards a Framework to Elicit and Manage Security and Privacy Requirements from Laws and Regulations.
 #@Shareeful Islam,Haralambos Mouratidis,Stefan Wagner
 #t2010
@@ -1386,22 +1266,6 @@
 #t2010
 #cISSE
 #index2933282
-#% 
-#!
-  
-#*Integrating business strategies with requirement models of legal compliance.
-#@Sepideh Ghanavati,Daniel Amyot,Liam Peyton,Alberto Siena,Anna Perini,Angelo Susi
-#t2010
-#cIJEB
-#index2933708
-#% 
-#!
-  
-#*Extending enterprise architecture modelling with business goals and requirements.
-#@Wilco Engelsman,Dick A. C. Quartel,Henk Jonkers,Marten van Sinderen
-#t2011
-#cEnterprise IS
-#index2984590
 #% 
 #!
   
@@ -1476,28 +1340,6 @@
 #%1242735
 #%1325196
 #%2908161
-#!
-  
-#*On the elements of an enterprise: towards an ontology-based account.
-#@João Paulo A. Almeida,Evellin C. S. Cardoso
-#t2011
-#cSAC
-#index3027131
-#%62031
-#%177742
-#%558283
-#%558367
-#%583267
-#%745902
-#%845731
-#%1242731
-#%2812219
-#%2882361
-#%2887211
-#%3001913
-#%3204827
-#%3204998
-#%3204973
 #!
   
 #*Modeling Approach Using Goal Modeling and Enterprise Architecture for Business IT Alignment.
@@ -1660,14 +1502,6 @@
 #t2011
 #cPoEM
 #index3238282
-#% 
-#!
-  
-#*A Goal Oriented Approach to Identify and Configure Feature Models for Software Product Lines.
-#@Carla T. L. L. Silva,Clarissa Borba,Jaelson Castro
-#t2011
-#cWER
-#index3291655
 #% 
 #!
   
