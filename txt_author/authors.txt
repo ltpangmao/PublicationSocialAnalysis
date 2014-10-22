@@ -226,7 +226,7 @@ L. Chung , D. Gross , E. Yu
 Alexei Lapouchnian, Yijun Yu, Sotirios Liaskos, John Mylopoulos
 Sotirios Liaskos, Alexei Lapouchnian, Yiqiao Wang, Yijun Yu, Steve Easterbrook
 Jaelson Castro, Manuel Kolp, John Mylopoulos
-Yijun Yu, Yiqiao Wang ; Mylopoulos, J. ; Liaskos, S. ; Lapouchnian, A. ; Sampaio do Prado Leite, J.C.
+Yijun Yu, Yiqiao Wang ; Mylopoulos, J. ; Liaskos, S. ; Lapouchnian, A. ; Leite, J.C.Sampaio do Prado 
 Steven J. Bleistein, Karl Cox , June Verner
 Lin Liu; Eric Yu
 Axel van Lamsweerde

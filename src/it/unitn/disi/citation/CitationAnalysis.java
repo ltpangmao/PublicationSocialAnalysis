@@ -438,15 +438,15 @@ public class CitationAnalysis {
 
 		//add authors with customized properties
 		String shown_label = "";
-		for (Paper paper : paper_set) {
+		for (Paper paper : paper_set ) {
 			if (paper.current_citations.size() > 0 || paper.current_references.size() > 0) {
-				shown_label = paper.authors.getFirst().last_name+paper.year;
+				shown_label = paper.authors.getFirst().last_name+"\n"+paper.year;
 
-				double node_height = 1;//0.86 + as.alternative.size() * 0.1;
-				double node_width = 3;//1.64 + as.alternative.size() * 0.2;
-				double font_size = 30;// + as.alternative.size() * 2;
+				double node_height = 2.5;//0.86 + as.alternative.size() * 0.1;
+				double node_width = 4;//1.64 + as.alternative.size() * 0.2;
+				double font_size = 50;// + as.alternative.size() * 2;
 				author_graph += paper.id + "[shape=ellipse,width=" + node_width + ",height=" + node_height
-						+ ",fixedsize = true, fontname=\"Helvetica-Bold\", fontsize=" + font_size + ",label=\""
+						+ ",fixedsize = true, fontname=\"Helvetica\", fontsize=" + font_size + ",label=\""
 						+ shown_label + "\n" + "\"" + "];\n";
 			}
 		}

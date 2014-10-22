@@ -156,7 +156,7 @@ public class AuthorAnalysis {
 
 		
 		/****
-		 * For less nodes (3), voronoi + neato is better
+		 * For less nodes (3), voronoi + fdp is better
 		 * For more nodes (1), neato is much faster than fdp, but later has better result
 		 * scalexy is better
 		 ****/
@@ -171,12 +171,20 @@ public class AuthorAnalysis {
 			if (as.alternative.size() >= author_threshold) {
 				shown_label = as.identity.replaceAll("_", ".");
 
-				double node_height = 0.86 + as.alternative.size() * 0.1;
-				double node_width = 1.64 + as.alternative.size() * 0.2;
-				double font_size = 30;// + as.alternative.size() * 2;
+				// proportional size
+//				double node_height = 0.86 + as.alternative.size() * 0.1;
+//				double node_width = 1.64 + as.alternative.size() * 0.2;
+//				double font_size = 24 + as.alternative.size() * 2;
+
+				//fixed size
+				double node_height = 15;
+				double node_width = 25;
+				double font_size = 30;
+				
 				author_graph += as.identity.replaceAll("-", "_") + "[shape=ellipse,width=" + node_width + ",height="
-						+ node_height + ",fixedsize = true, fontname=\"Helvetica-Bold\", fontsize=" + font_size
+						+ node_height + ",fixedsize = true, fontname=\"Helvetica\", fontsize=" + font_size
 						+ ",label=\"" + shown_label + "\n" + as.alternative.size() + "\"" + "" + "];\n";
+				//Helvetica-Bold
 			}
 		}
 		for (AuthorRelation ar : ars) {
