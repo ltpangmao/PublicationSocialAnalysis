@@ -19,9 +19,9 @@ import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class CitationAnalysis {
-	public int redundancy_difference = 3;
-	public int redundancy_length_low = 10;
-	public int redundancy_length_high = 15;
+	public int redundancy_difference = 2;
+	public int redundancy_length_low = 2;
+	public int redundancy_length_high = 3;
 	
 
 	public static void main(String[] args) throws IOException {
@@ -146,6 +146,69 @@ public class CitationAnalysis {
 			}
 		}
 	}
+
+	
+	
+	/**
+	 * check how many papers of the target paper set exist in the base paper set 
+	 * @param paper_set2
+	 */
+	public void checkOverlap(LinkedList<Paper> target, LinkedList<Paper> base) {
+		LinkedList<MutablePair<Integer, Integer>> result = new LinkedList<MutablePair<Integer, Integer>>();
+
+		int count_1 = 0, count_2 = 0;
+		for (count_1 = 0; count_1 < target.size(); count_1++) {
+			Paper paper_1 = target.get(count_1);
+			String title = paper_1.title;
+			for (count_2 = 0; count_2 < base.size(); count_2++) {
+				Paper paper_2 = base.get(count_2);
+				String search = paper_2.title;
+				if (count_1 != count_2 && findSimilarByWords(title, search, redundancy_difference, redundancy_length_low, redundancy_length_high)) {
+					MutablePair<Integer, Integer> pair = new MutablePair<Integer, Integer>();
+					pair.left = count_1;
+					pair.right = count_2;
+
+					if (result.size() == 0) {
+						result.add(pair);
+					} else {
+						boolean add_pair = true;
+						for (MutablePair<Integer, Integer> temp : result) {
+							if ((temp.left.equals(pair.left) && temp.right.equals(pair.right))
+									|| (temp.left.equals(pair.right) && temp.right.equals(pair.left))) {
+								add_pair = false;
+								break;
+							} 
+						}
+						if(add_pair){
+							result.add(pair);
+						}
+					}
+				}
+			}
+		}
+		
+		//print results
+		if (result.size() == 0) {
+			System.out.println("No redundancy found!");
+		} else {
+			for (MutablePair<Integer, Integer> record : result) {
+				System.out.println(record.left + " " + target.get(record.left).title);
+				System.out.println(record.right + " " + base.get(record.right).title);
+				System.out.println();
+			}
+			System.out.println(result.size());
+			for (MutablePair<Integer, Integer> record : result) {
+				System.out.println(target.get(record.left).title);
+			}
+		}
+	}
+
+	
+	
+	
+	
+	
+	
 	
 	/**
 	 * show matched and unmatched papers

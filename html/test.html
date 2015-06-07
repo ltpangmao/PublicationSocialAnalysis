@@ -1,0 +1,127 @@
+<html>
+<head>
+  <title>example</title>
+
+  <script src="vis/vis.js"></script>
+  <link href="vis/vis.css" rel="stylesheet" type="text/css" />
+  <script src="vis/googleAnalytics.js"></script>
+</head>
+<body>
+<p>
+  Citation Network
+</p>
+  
+<div id="optionsContainer"></div>
+  
+<div id="mynetwork"></div>
+
+  <script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+    {id: 1, label: 1},
+    {id: 2, label: 2},
+    {id: 3, label: 3},
+    {id: 4, label: 4},
+    {id: 5, label: 5},
+    {id: 6, label: 6},
+    {id: 7, label: 7},
+    {id: 8, label: 8}
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+    {from: 1, to: 8, arrows:'to',label:'integration', title:"fsd"},
+    {from: 1, to: 3, group: '1'},
+    {from: 1, to: 2,  group: '1'},
+    {from: 2, to: 4, group: '2'},
+    {from: 2, to: 5, group: '2'},
+    {from: 5, to: 6, group: '0'},
+    {from: 6, to: 7, group: '0'},
+    {from: 6, to: 8, group: '0'},
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+   };
+   
+   
+   var options = {
+   autoResize: true,
+   // clickToUse: true,
+   		nodes: {
+            shape: 'dot',
+            size: 30,
+            font: {
+                size: 24,
+                color: 'red'
+            },
+            borderWidth: 2
+   		},
+   
+   		groups:{
+		   // useDefaultGroups: false,
+		   0: {color:'red',width: 8},
+		   1: {color:'blue'},
+		   2: {color:'yellow'}
+		   },
+        edges: {
+            width: 2
+        },
+   
+	   interaction: {
+		   hover: true,
+		   //hideEdgesOnDrag: true,
+		   //selectable: false,
+		   dragNodes: true
+		   },
+		   
+		   
+		manipulation: {
+			    enabled: false,
+			    initiallyActive: false,
+			    addNode: true,
+			    addEdge: true,
+//			    addEdge: function(edgeData,callback) {
+//			        if (edgeData.from === edgeData.to) {
+//			          var r = confirm("Do you want to connect the node to itself?");
+//			          if (r === true) {
+//			            callback(edgeData);
+//			          }
+//			        }
+//			        else {
+//			          callback(edgeData);
+//			        }
+//			      },
+			    editNode: undefined,
+			    editEdge: true,
+			    deleteNode: true,
+			    deleteEdge: true,
+			    controlNodeStyle:{
+			      // all node options are valid.
+			    }
+		},
+        
+        configure: {
+            enabled: true,
+            //filter: 'nodes,edges',
+            filter: function (option, path) {
+                if (option === 'inherit') {return true;}
+                if (option === 'type' && path.indexOf("smooth") !== -1) {return true;}
+//                if (option === 'roundness') {return true;}
+                return false;
+              },
+            container: document.getElementById('optionsContainer'),
+            showButton: false
+         }
+   };
+   
+   
+  var network = new vis.Network(container, data, options);   
+  
+
+  </script>
+</body>
+</html>
