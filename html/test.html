@@ -12,10 +12,96 @@
 </p>
   
 <div id="optionsContainer"></div>
-  
+
+<input type="checkbox" name="check_type" id="check_extend" checked> Extension <br>
+<input type="checkbox" name="check_type" id="check_formal" checked> Formulation <br>
+<input type="checkbox" name="check_type" id="check_eval" unchecked> Evaluation <br>
+
+<input type="button" onclick="showEdge()" value="Show specific types of edges"> <br />
+
 <div id="mynetwork"></div>
 
+
+
+
+
+
   <script type="text/javascript">
+  
+//  A set of counters, each of which is specific to a type of link, 
+//  which is first calculated when the dataset is generated/imported and should be well maintained.
+  var extendCounter = 3;
+  var formalCounter = 3;
+  var evalCounter = 2;
+  
+  
+  function showEdge() {
+//      var newColor = '#' + Math.floor((Math.random() * 255 * 255 * 255)).toString(16);
+	  // collect all check boxes
+	  var types = document.getElementsByName("check_type");
+
+//	  Link the counters to the check boxes
+	  var counter_set = {
+			    "check_extend": extendCounter,
+			    "check_formal": formalCounter,
+			    "check_eval": evalCounter
+	  };
+	  
+	  
+//	  traverse all
+	  for (var i = 0; i < types.length; i++) {
+		  var hide = !types[i].checked;
+		  for(var p = 1; p <= counter_set[types[i].id]; p++) {
+			  // get the later part of the id string to 
+			  var type_name = types[i].id.substring(6);
+			  edges.update([{id:type_name+p, hidden: hide}]);
+		  }
+	  }
+	  
+	  
+//	  var type_name_set = {
+//	    "check_extend": "extend",
+//	    "check_formal": "formal",
+//	    "check_eval": "eval"
+//};
+//type_name = type_name_set[types[i].id];
+	  
+	  
+
+//	  var i,j;
+//	  for (i = 0; i < types.length; i++) {
+//	      if (types[i].type == "checkbox" && types[i].id == "check_extend") {
+//	    	  var hide = !types[i].checked;
+//	    	  for(j = 1; j <= extendCounter; j++) { 
+//	    		  edges.update([{id:'extend'+j, hidden: hide}]);
+//	          } 
+//	      }
+//	      else if (types[i].type == "checkbox" && types[i].id == "check_formal") {
+//	    	  var hide = !types[i].checked;
+//	    	  for(j = 1; j <= formalCounter; j++) { 
+//	    		  edges.update([{id:'formal'+j, hidden: hide}]);
+//	          } 
+//	      }
+//	      else if (types[i].type == "checkbox" && types[i].id == "check_eval") {
+//	    	  var hide = !types[i].checked;
+//	    	  for(j = 1; j <= evalCounter; j++) { 
+//	    		  edges.update([{id:'eval'+j, hidden: hide}]);
+//	          } 
+//	      }
+//	      else{
+//	    	  
+//	      }
+//	  }
+	  
+//      for(i = 1; i <= extensionNumber; i++) { 
+//    	  edges.update([{id:'extend'+i, hidden: true}]);
+//      }   
+//      nodes.add({id:11, label:"I'm new!"});
+//      nodeIds.push(newId);
+  }
+  
+  
+  
   // create an array with nodes
   var nodes = new vis.DataSet([
     {id: 1, label: 1},
@@ -30,14 +116,14 @@
 
   // create an array with edges
   var edges = new vis.DataSet([
-    {from: 1, to: 8, arrows:'to',label:'integration', title:"fsd"},
-    {from: 1, to: 3, group: '1'},
-    {from: 1, to: 2,  group: '1'},
-    {from: 2, to: 4, group: '2'},
-    {from: 2, to: 5, group: '2'},
-    {from: 5, to: 6, group: '0'},
-    {from: 6, to: 7, group: '0'},
-    {from: 6, to: 8, group: '0'},
+    {id: 'extend1', from: 1, to: 8}, //arrows:'to',label:'integration', title:"fsd"},
+    {id: 'extend2', from: 1, to: 3},
+    {id: 'extend3', from: 1, to: 2},
+    {id: 'formal1', from: 2, to: 4},
+    {id: 'formal2', from: 2, to: 5},
+    {id: 'formal3', from: 5, to: 6},
+    {id: 'eval1', from: 6, to: 7},
+    {id: 'eval2', from: 6, to: 8},
   ]);
 
   // create a network
@@ -58,6 +144,10 @@
                 size: 24,
                 color: 'red'
             },
+            fixed: {
+                x:false,
+                y:false
+              },
             borderWidth: 2
    		},
    
@@ -68,15 +158,35 @@
 		   2: {color:'yellow'}
 		   },
         edges: {
+        	arrows:'to',
             width: 2
         },
    
-	   interaction: {
-		   hover: true,
-		   //hideEdgesOnDrag: true,
-		   //selectable: false,
-		   dragNodes: true
-		   },
+        interaction:{
+            dragNodes:true,
+            dragView: true,
+            hideEdgesOnDrag: false,
+            hideNodesOnDrag: false,
+            hover: true,
+            hoverConnectedEdges: true,
+            keyboard: {
+              enabled: false,
+              speed: {x: 10, y: 10, zoom: 0.02},
+              bindToWindow: true
+            },
+            multiselect: true,
+            navigationButtons: false,
+            selectable: true,
+            selectConnectedEdges: true,
+            tooltipDelay: 300,
+            zoomView: true
+          },
+          
+          
+//          //cluster
+//          joinCondition:function(nodeOptions) {
+//        	    return nodeOptions.cid === 1;
+//        	  },
 		   
 		   
 		manipulation: {
@@ -103,14 +213,60 @@
 			      // all node options are valid.
 			    }
 		},
+		
+		
+		 physics:{
+			    enabled: true,
+			    barnesHut: {
+			      gravitationalConstant: -3000,
+			      centralGravity:0.3,
+			      springLength: 95,
+			      springConstant: 0.04,
+			      damping: 0.09,
+			      avoidOverlap: 0
+			    },
+			    forceAtlas2Based: {
+			      gravitationalConstant: -50,
+			      centralGravity: 0.01,
+			      springConstant: 0.08,
+			      springLength: 100,
+			      damping: 0.4,
+			      avoidOverlap: 0
+			    },
+			    repulsion: {
+			      centralGravity: 0.2,
+			      springLength: 200,
+			      springConstant: 0.05,
+			      nodeDistance: 100,
+			      damping: 0.09
+			    },
+			    hierarchicalRepulsion: {
+			      centralGravity: 0.0,
+			      springLength: 100,
+			      springConstant: 0.01,
+			      nodeDistance: 120,
+			      damping: 0.09
+			    },
+			    maxVelocity: 50,
+			    minVelocity: 0.1,
+			    solver: 'barnesHut',
+			    stabilization: {
+			      enabled: true,
+			      iterations: 1000,
+			      updateInterval: 100,
+			      onlyDynamicEdges: false,
+			      fit: true
+			    },
+			    timestep: 0.5
+			  },
         
         configure: {
-            enabled: true,
-            //filter: 'nodes,edges',
+            enabled: false,
+//            filter: 'nodes,edges',
             filter: function (option, path) {
                 if (option === 'inherit') {return true;}
+                if (option === 'physics' && path.indexOf("nodes") !== -1) {return true;}
                 if (option === 'type' && path.indexOf("smooth") !== -1) {return true;}
-//                if (option === 'roundness') {return true;}
                 return false;
               },
             container: document.getElementById('optionsContainer'),
@@ -120,7 +276,7 @@
    
    
   var network = new vis.Network(container, data, options);   
-  
+//  network.clustering.cluster(options);
 
   </script>
 </body>
