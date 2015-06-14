@@ -1,26 +1,55 @@
 <html>
 <head>
-  <title>example</title>
-
+  <title>Citation Network</title>
   <script src="vis/vis.js"></script>
   <link href="vis/vis.css" rel="stylesheet" type="text/css" />
   <script src="vis/googleAnalytics.js"></script>
-  
-  
-</head>
-<body>
-<p>
-  Citation Network
-</p>
-  
+  </head>
+
+<body>  
+
+
+<div id="visualization">
+
+<b>Select citation types</b><br>
+
+
+<div class="row">
+<table style="width:100%">
+<tr>
+	<td>
+		<input type="checkbox" name="check_type" id="check_extend" checked> Extension <br>
+		<input type="checkbox" name="check_type" id="check_formal" checked> Formalation <br>
+		<input type="checkbox" name="check_type" id="check_eval" checked> Evaluation <br>
+	</td>
+	<td>
+  		<input type="checkbox" name="check_type" id="check_prop" checked> Proposal <br>
+  		<input type="checkbox" name="check_type" id="check_inte" checked> Integration <br>
+  		<input type="checkbox" name="check_type" id="check_impl" checked> Implementation <br>
+	</td> 
+	<td>
+	  	<input type="checkbox" name="check_type" id="check_exp" checked> Experience Report <br>
+	  	<input type="checkbox" name="check_type" id="check_meta" checked> Meta Study <br>
+	  	<input type="checkbox" name="check_type" id="check_app" checked> Application <br>
+	</td>
+	<td>
+		<input type="checkbox" name="check_type" id="check_onto" checked> Ontology <br>
+		<input type="checkbox" name="check_type" id="check_comp" checked> Comparison <br>
+		<input type="checkbox" name="check_type" id="check_ref" checked> Reference <br>
+	</td>
+</tr>
+</table>
+</div>
+
+<input type="button" onclick="negateSelection()" value="Negate selections">
+<input type="button" onclick="showEdge()" value="Show citations"> 
+</div>
+
 <div id="optionsContainer"></div>
-
-<input type="checkbox" name="check_type" id="check_extend" checked> Extension <br>
-<input type="checkbox" name="check_type" id="check_formal" checked> Formulation <br>
-<input type="checkbox" name="check_type" id="check_eval" unchecked> Evaluation <br>
-
-<input type="button" onclick="showEdge()" value="Show specific types of edges"> <br />
-
+<br>
+<br>
+<br>
+<br>
 <div id="mynetwork" style="width:1000px;  border: 1px solid;"></div>
 
 
@@ -31,25 +60,42 @@
 
 
 
-
-  <script type="text/javascript">
+<script type="text/javascript">
   
-  /**
-	 * a set of functions
-	 */
+/**
+ * a set of functions
+ */
+function negateSelection() {
+	var types = document.getElementsByName("check_type");		  
+	// traverse all
+	for (var i = 0; i < types.length; i++) {
+		types[i].checked = !types[i].checked;
+	}
+}
+
+
 function showEdge() {
 //var newColor = '#' + Math.floor((Math.random() * 255 * 255 *
 //255)).toString(16);
 	  // collect all check boxes
-	  var types = document.getElementsByName("check_type");
+	var types = document.getElementsByName("check_type");
 	  
 	  
-	  // pairs: <edge_type_checkbox_name, edge_counter>
-	   var checkbox_counter_pair = {
-			    "check_extend": extendCounter,
-			    "check_formal": formalCounter,
-			    "check_eval": evalCounter
-	   };
+	// pairs: <edge_type_checkbox_name, edge_counter>
+	var checkbox_counter_pair = {
+			"check_extend": extendCounter,
+			"check_formal": formalCounter,
+			"check_eval": evalCounter,
+			"check_prop": propCounter,
+			"check_inte": inteCounter,
+			"check_impl": implCounter,
+			"check_exp": expCounter,
+			"check_meta": metaCounter,
+			"check_app": appCounter,
+			"check_onto": ontoCounter,
+			"check_comp": compCounter,
+			"check_ref": refCounter
+	 };
 	  
 	  
 	   // traverse all
@@ -135,13 +181,15 @@ function addNode(noteset, id_value, label_value) {
 
 
 function generateRandomEdges(edgeset, e_number, n_number) {
+	 var type_id;
 	 var edge_type;
 	 var edge_id;
 	 var from, to;
 	  for (var i = 1; i <= e_number; i++) {
-		  edge_type = number_type_pair[getRandomInt(1,3)];
-		  from = getRandomInt(1,n_number+1);
-		  to = getRandomInt(1,n_number+1);
+		  type_id = getRandomInt(1,12);
+		  edge_type = number_type_pair[type_id];
+		  from = getRandomInt(1,n_number);
+		  to = getRandomInt(1,n_number);
 		  
 //edge_type = getRandomInt(1,3);
 		  if(edge_type == 'extend'){
@@ -156,22 +204,59 @@ function generateRandomEdges(edgeset, e_number, n_number) {
 			  evalCounter++;
 			  edge_id = edge_type+evalCounter;
 		  }
+		  else if (edge_type == 'prop'){
+			  propCounter++;
+			  edge_id = edge_type+propCounter;
+		  }
+		  else if (edge_type == 'inte'){
+			  inteCounter++;
+			  edge_id = edge_type+inteCounter;
+		  }
+		  else if (edge_type == 'impl'){
+			  implCounter++;
+			  edge_id = edge_type+implCounter;
+		  }
+		  else if (edge_type == 'exp'){
+			  expCounter++;
+			  edge_id = edge_type+expCounter;
+		  }
+		  else if (edge_type == 'meta'){
+			  metaCounter++;
+			  edge_id = edge_type+metaCounter;
+		  }
+		  else if (edge_type == 'app'){
+			  appCounter++;
+			  edge_id = edge_type+appCounter;
+		  }
+		  else if (edge_type == 'onto'){
+			  ontoCounter++;
+			  edge_id = edge_type+ontoCounter;
+		  }
+		  else if (edge_type == 'comp'){
+			  compCounter++;
+			  edge_id = edge_type+compCounter;
+		  }
+		  else if (edge_type == 'ref'){
+			  refCounter++;
+			  edge_id = edge_type+refCounter;
+		  }
 		  else{
 			  window.alert("egde type generation error");
 		  }
-		  addEdge(edgeset, edge_id, edge_type, from, to);
+		  addEdge(edgeset, edge_id, edge_type, from, to, number_color[type_id]);
 //window.alert(edge_id);
 	  }
 }
 
 //add individual edge
-function addEdge(edgeset, id_value, label_value, from_value, to_value) {
+function addEdge(edgeset, id_value, label_value, from_value, to_value, color_value) {
 	 try {
 		 edgeset.add({
 			 id: id_value,
 			 label: label_value,
 			 from: from_value,
-			 to: to_value
+			 to: to_value,
+			 color: color_value
 		 });
 	 }
 	 catch (err) {
@@ -232,25 +317,68 @@ function getRandomInt(min, max) {
 var extendCounter = 0;
 var formalCounter = 0;
 var evalCounter = 0;
+var propCounter = 0;
+var inteCounter = 0;
+var implCounter = 0;
+var expCounter = 0;
+var metaCounter = 0;
+var appCounter = 0;
+var ontoCounter = 0;
+var compCounter = 0;
+var refCounter = 0;
 
 // global pairs: <edge_type_name, edge_counter>
 var type_counter_pair = {
-		    "extend": extendCounter,
-		    "formal": formalCounter,
-		    "eval": evalCounter
+		    "extend" : extendCounter,
+		    "formal" : formalCounter,
+		    "eval" : evalCounter,
+		    "prop" : propCounter,
+			"inte" : inteCounter,
+			"impl" : implCounter,
+			"exp" : expCounter,
+			"meta" : metaCounter,
+			"app" : appCounter,
+			"onto" : ontoCounter,
+			"comp" : compCounter,
+			"ref" : refCounter
 };
 
 // global pairs: <number, edge_type_name>
 var number_type_pair = {
 		    1: "extend",
 		    2: "formal",
-		    3: "eval"
+		    3: "eval",
+		    4: "prop",
+			5: "inte",
+			6: "impl",
+			7: "exp",
+			8: "meta",
+			9: "app",
+			10: "onto",
+			11: "comp",
+			12: "ref"
+};
+
+//global pairs: <number, color>
+var number_color = {
+		    1: "red",
+		    2: "yellow",
+		    3: "blue",
+		    4: "green",
+			5: "cyan",
+			6: "olive",
+			7: "salmon",
+			8: "lime",
+			9: "pink",
+			10: "indigo",
+			11: "brown",
+			12: "black"
 };
 
 
 // the number of nodes and edges
-var node_number = 5;
-var edge_number = 20;
+var node_number = 50;
+var edge_number = 150;
 
 
 var nodes = new vis.DataSet();
@@ -275,8 +403,8 @@ var options = {
 	         shape: 'dot',
 	         size: 15,
 	         font: {
-	             size: 24,
-	             color: 'red'
+	             size: 20,
+	             color: 'black'
 	         },
 	         fixed: {
 	             x:false,
@@ -293,6 +421,7 @@ var options = {
 			   },
 			   
 	     edges: {
+//	    	 physics: false,
 	     	arrows:'to',
 	         width: 2
 	     },
@@ -315,93 +444,40 @@ var options = {
          selectConnectedEdges: true,
          tooltipDelay: 300,
          zoomView: true
-       },
-       
-       
-////cluster
-//joinCondition:function(nodeOptions) {
-//return nodeOptions.cid === 1;
-//},
-		   
-		   
-		manipulation: {
-			    enabled: false,
-			    initiallyActive: false,
-			    addNode: true,
-			    addEdge: true,
-//addEdge: function(edgeData,callback) {
-//if (edgeData.from === edgeData.to) {
-//var r = confirm("Do you want to connect the node to itself?");
-//if (r === true) {
-//callback(edgeData);
-//}
-//}
-//else {
-//callback(edgeData);
-//}
-//},
-			    editNode: undefined,
-			    editEdge: true,
-			    deleteNode: true,
-			    deleteEdge: true,
-			    controlNodeStyle:{
-			      // all node options are valid.
-			    }
-		},
-		
+       },	
 		
 		 physics:{
 			    enabled: true,
 			    barnesHut: {
 			      gravitationalConstant: -3000,
 			      centralGravity:0.3,
-			      springLength: 95,
+			      springLength: 5,
 			      springConstant: 0.04,
-			      damping: 0.09,
+			      damping: 1,
 			      avoidOverlap: 0
 			    },
-			    forceAtlas2Based: {
-			      gravitationalConstant: -50,
-			      centralGravity: 0.01,
-			      springConstant: 0.08,
-			      springLength: 100,
-			      damping: 0.4,
-			      avoidOverlap: 0
-			    },
-			    repulsion: {
-			      centralGravity: 0.2,
-			      springLength: 200,
-			      springConstant: 0.05,
-			      nodeDistance: 100,
-			      damping: 0.09
-			    },
-			    hierarchicalRepulsion: {
-			      centralGravity: 0.0,
-			      springLength: 100,
-			      springConstant: 0.01,
-			      nodeDistance: 120,
-			      damping: 0.09
-			    },
-			    maxVelocity: 20,
+			    maxVelocity: 50,
 			    minVelocity: 0.1,
 			    solver: 'barnesHut',
 			    stabilization: {
 			      enabled: true,
-			      iterations: 1000,
+			      iterations: 10,
 			      updateInterval: 100,
-			      onlyDynamicEdges: false,
+			      onlyDynamicEdges: true,
 			      fit: true
 			    },
 			    timestep: 0.5
 			  },
      
      configure: {
-         enabled: false,
+         enabled: true,
 //filter: 'nodes,edges',
          filter: function (option, path) {
-             if (option === 'inherit') {return true;}
-             if (option === 'physics' && path.indexOf("nodes") !== -1) {return true;}
-             if (option === 'type' && path.indexOf("smooth") !== -1) {return true;}
+//             if (option === 'inherit') {return true;}
+//             if (option === 'physics' && path.indexOf("nodes") !== -1) {return true;}
+//             if (option === 'physics' && path.indexOf("edges") !== -1) {return true;}
+//             if (option === 'type' && path.indexOf("smooth") !== -1) {return true;}
+             if (option === 'enabled' && path.indexOf("physics") !== -1) {return true;}
              return false;
            },
          container: document.getElementById('optionsContainer'),

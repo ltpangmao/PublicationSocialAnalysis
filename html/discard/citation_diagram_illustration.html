@@ -1,0 +1,210 @@
+<html>
+<head>
+  <title>example</title>
+
+  
+  <script src="vis/vis.js"></script>
+  <link href="vis/vis.css" rel="stylesheet" type="text/css" />
+  <script src="vis/googleAnalytics.js"></script>
+  <script src="vis/test.js" type="text/javascript"></script>
+</head>
+<body>
+
+<p>
+  Citation Network
+</p>
+  
+<div id="optionsContainer"></div>
+
+<input type="checkbox" name="check_type" id="check_extend" checked> Extension <br>
+<input type="checkbox" name="check_type" id="check_formal" checked> Formulation <br>
+<input type="checkbox" name="check_type" id="check_eval" unchecked> Evaluation <br>
+
+<input type="button" onclick="showEdge()" value="Show specific types of edges"> <br />
+
+<div id="mynetwork"></div>
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+  
+  
+   
+   var nodes = new vis.DataSet();
+   //nodes = generateNodes(nodes, node_number);
+//   nodes = addNode(nodes, 1, 1);
+//   nodes = addNode(nodes, 2, 2);
+   nodes.add({id: 1,label: 1});
+   nodes.add({id: 2,label: 2});
+
+   var edges = new vis.DataSet();
+//   edges.add({
+//		 id: 3,
+//		 label: 3,
+//		 from: 1,
+//		 to: 2
+//	 });
+//   edges = generateRandomEdges(edges, edge_number, node_number);
+   edges = addEdge(edges, 3, 3, 1, 2);  
+  
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+   };
+   
+   
+   var options = {
+   autoResize: true,
+   // clickToUse: true,
+   		nodes: {
+            shape: 'dot',
+            size: 30,
+            font: {
+                size: 24,
+                color: 'red'
+            },
+            fixed: {
+                x:false,
+                y:false
+              },
+            borderWidth: 2
+   		},
+   
+   		groups:{
+		   // useDefaultGroups: false,
+		   0: {color:'red',width: 8},
+		   1: {color:'blue'},
+		   2: {color:'yellow'}
+		   },
+        edges: {
+        	arrows:'to',
+            width: 2
+        },
+   
+        interaction:{
+            dragNodes:true,
+            dragView: true,
+            hideEdgesOnDrag: false,
+            hideNodesOnDrag: false,
+            hover: true,
+            hoverConnectedEdges: true,
+            keyboard: {
+              enabled: false,
+              speed: {x: 10, y: 10, zoom: 0.02},
+              bindToWindow: true
+            },
+            multiselect: true,
+            navigationButtons: false,
+            selectable: true,
+            selectConnectedEdges: true,
+            tooltipDelay: 300,
+            zoomView: true
+          },
+          
+          
+// //cluster
+// joinCondition:function(nodeOptions) {
+// return nodeOptions.cid === 1;
+// },
+		   
+		   
+		manipulation: {
+			    enabled: false,
+			    initiallyActive: false,
+			    addNode: true,
+			    addEdge: true,
+// addEdge: function(edgeData,callback) {
+// if (edgeData.from === edgeData.to) {
+// var r = confirm("Do you want to connect the node to itself?");
+// if (r === true) {
+// callback(edgeData);
+// }
+// }
+// else {
+// callback(edgeData);
+// }
+// },
+			    editNode: undefined,
+			    editEdge: true,
+			    deleteNode: true,
+			    deleteEdge: true,
+			    controlNodeStyle:{
+			      // all node options are valid.
+			    }
+		},
+		
+		
+		 physics:{
+			    enabled: true,
+			    barnesHut: {
+			      gravitationalConstant: -3000,
+			      centralGravity:0.3,
+			      springLength: 95,
+			      springConstant: 0.04,
+			      damping: 0.09,
+			      avoidOverlap: 0
+			    },
+			    forceAtlas2Based: {
+			      gravitationalConstant: -50,
+			      centralGravity: 0.01,
+			      springConstant: 0.08,
+			      springLength: 100,
+			      damping: 0.4,
+			      avoidOverlap: 0
+			    },
+			    repulsion: {
+			      centralGravity: 0.2,
+			      springLength: 200,
+			      springConstant: 0.05,
+			      nodeDistance: 100,
+			      damping: 0.09
+			    },
+			    hierarchicalRepulsion: {
+			      centralGravity: 0.0,
+			      springLength: 100,
+			      springConstant: 0.01,
+			      nodeDistance: 120,
+			      damping: 0.09
+			    },
+			    maxVelocity: 50,
+			    minVelocity: 0.1,
+			    solver: 'barnesHut',
+			    stabilization: {
+			      enabled: true,
+			      iterations: 1000,
+			      updateInterval: 100,
+			      onlyDynamicEdges: false,
+			      fit: true
+			    },
+			    timestep: 0.5
+			  },
+        
+        configure: {
+            enabled: false,
+// filter: 'nodes,edges',
+            filter: function (option, path) {
+                if (option === 'inherit') {return true;}
+                if (option === 'physics' && path.indexOf("nodes") !== -1) {return true;}
+                if (option === 'type' && path.indexOf("smooth") !== -1) {return true;}
+                return false;
+              },
+            container: document.getElementById('optionsContainer'),
+            showButton: false
+         }
+   };
+   
+   
+  var network = new vis.Network(container, data, options);   
+// network.clustering.cluster(options);
+
+  </script>
+</body>
+</html>
