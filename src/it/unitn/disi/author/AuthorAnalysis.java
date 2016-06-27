@@ -20,7 +20,6 @@ public class AuthorAnalysis {
 		
 		// input stream
 		BufferedReader br = null;
-		String line;
 		br = new BufferedReader(new FileReader("txt_author/authors.txt"));
 
 		// first process all names
@@ -84,7 +83,9 @@ public class AuthorAnalysis {
 //		rt = Runtime.getRuntime();
 //		pr = rt.exec(draw_graphviz);
 		
-		System.out.println(records.size() + " " + author_sets.size() + " " + count);
+		System.out.println(" the total number of papers: " + records.size() 
+				+ "\n the total number of authors: " + author_sets.size() 
+				+ "\n the total number of currently processed authors: " + count);
 	}
 
 	private static String generateGVFile(LinkedList<AuthorSet> author_sets, LinkedList<AuthorRelation> ars) {
@@ -102,7 +103,7 @@ public class AuthorAnalysis {
 		String shown_label = "";
 		for (AuthorSet as : author_sets) {
 			if (as.alternative.size() >= author_threshold) {
-				shown_label = as.identity.replaceAll("_", ".");
+				shown_label = as.identity.replaceAll(name_separator, ".");
 
 				// proportional size
 //				double node_height = 0.86 + as.alternative.size() * 0.1;
@@ -115,8 +116,8 @@ public class AuthorAnalysis {
 				double node_height = 1.2;
 				double node_width = 3;
 				double font_size = 30;
-				
-				author_graph += as.identity.replaceAll("-", "_") + "[shape=ellipse,width=" + node_width + ",height="
+				// the identity of an element in graphviz should not contain blank space
+				author_graph += as.identity.replaceAll(" ", "_") + "[shape=ellipse,width=" + node_width + ",height="
 						+ node_height + ",fixedsize = true, fontname=\"Helvetica\", fontsize=" + font_size
 						+ ",label=\"" + shown_label + "\n" + as.alternative.size() + "\"" + "" + "];\n";
 				//Helvetica-Bold
@@ -125,8 +126,9 @@ public class AuthorAnalysis {
 		for (AuthorRelation ar : ars) {
 			//refactor according to the requirement of graphviz
 			double pen_width = 1.5 + ar.number * 0.8;
-			author_graph += ar.au1.upper_set.identity.replaceAll("-", "_") + " -- "
-					+ ar.au2.upper_set.identity.replaceAll("-", "_") + "[penwidth=" + pen_width + "];\n";
+			// the identity of an element in graphviz should not contain blank space
+			author_graph += ar.au1.upper_set.identity.replaceAll(" ", "_") + " -- "
+					+ ar.au2.upper_set.identity.replaceAll(" ", "_") + "[penwidth=" + pen_width + "];\n";
 		}
 		author_graph += "}";
 
@@ -218,7 +220,7 @@ public class AuthorAnalysis {
 			String content = au.name;
 
 			content = content.trim();
-			if (content.indexOf(",") > -1 && content.length() > 5) {
+			if (content.indexOf(",") > -1 && content.length() > 3) {
 				// name separated by ","
 				String name[] = content.split(",");
 				au.last_name = name[0].trim();
@@ -254,6 +256,7 @@ public class AuthorAnalysis {
 						new_record.contained_authors.add(new_author);
 					}
 				}
+				/* temporally remove the this part, as current data set has its specific format
 				// otherwise separate authors by ","
 				else if (line.indexOf(",") > -1) {
 					String temp[] = line.split(",");
@@ -264,6 +267,7 @@ public class AuthorAnalysis {
 						new_record.contained_authors.add(new_author);
 					}
 				}
+				*/
 				else{
 					// add single author
 					Author new_author = new Author(line);

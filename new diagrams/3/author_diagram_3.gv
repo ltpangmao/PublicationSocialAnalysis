@@ -1,0 +1,289 @@
+graph G {
+overlap = scalexy;
+splines=true;
+A_Van_Lamsweerde[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="A.Van Lamsweerde
+19"];
+E_Letier[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="E.Letier
+9"];
+L_Chung[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="L.Chung
+12"];
+J_Mylopoulos[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Mylopoulos
+35"];
+E_Yu[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="E.Yu
+18"];
+L_Liu[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="L.Liu
+5"];
+P_Giorgini[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="P.Giorgini
+10"];
+R_Sebastiani[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="R.Sebastiani
+3"];
+J_Leite[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Leite
+9"];
+D_Amyot[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="D.Amyot
+11"];
+H_Wang[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="H.Wang
+3"];
+S_Bleistein[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.Bleistein
+3"];
+K_Cox[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="K.Cox
+3"];
+R_Ali[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="R.Ali
+4"];
+F_Dalpiaz[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="F.Dalpiaz
+5"];
+J_Horkoff[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Horkoff
+5"];
+G_Mussbacher[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="G.Mussbacher
+9"];
+L_Peyton[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="L.Peyton
+3"];
+M_Saeki[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="M.Saeki
+4"];
+L_Pasquale[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="L.Pasquale
+3"];
+Y_Yu[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="Y.Yu
+14"];
+A_Perini[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="A.Perini
+5"];
+A_Susi[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="A.Susi
+4"];
+W_Engelsman[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="W.Engelsman
+4"];
+M_Van_Sinderen[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="M.Van Sinderen
+3"];
+G_Elahi[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="G.Elahi
+3"];
+P_Heymans[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="P.Heymans
+3"];
+R_Matulevi_ius[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="R.Matulevi.ius
+3"];
+A_Lapouchnian[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="A.Lapouchnian
+9"];
+J_Kramer[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Kramer
+4"];
+S_Uchitel[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.Uchitel
+4"];
+S_McIlraith[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.McIlraith
+4"];
+Y_Wang[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="Y.Wang
+4"];
+N_Bencomo[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="N.Bencomo
+3"];
+B_Cheng[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="B.Cheng
+4"];
+P_Sawyer[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="P.Sawyer
+3"];
+D_Alrajeh[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="D.Alrajeh
+3"];
+A_Russo[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="A.Russo
+3"];
+X_Franch[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="X.Franch
+6"];
+N_Maiden[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="N.Maiden
+4"];
+A_Borgida[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="A.Borgida
+5"];
+N_Ernst[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="N.Ernst
+4"];
+I_Jureta[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="I.Jureta
+4"];
+S_Liaskos[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.Liaskos
+11"];
+S_Supakkul[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.Supakkul
+7"];
+T_Topaloglou[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="T.Topaloglou
+3"];
+P_Massonet[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="P.Massonet
+3"];
+S_Easterbrook[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.Easterbrook
+3"];
+C_Ponsard[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="C.Ponsard
+3"];
+F_Alencar[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="F.Alencar
+7"];
+J_Castro[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Castro
+8"];
+M_Lucena[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="M.Lucena
+5"];
+E_Santos[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="E.Santos
+5"];
+C_Silva[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="C.Silva
+6"];
+E_Navarro[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="E.Navarro
+3"];
+J_Almeida[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Almeida
+3"];
+G_Guizzardi[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="G.Guizzardi
+3"];
+J_Trujillo[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Trujillo
+3"];
+J_Maz___n[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Maz...n
+3"];
+J_Pimentel[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Pimentel
+5"];
+X_Peng[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="X.Peng
+3"];
+W_Zhao[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="W.Zhao
+3"];
+J_Ara___jo[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Ara...jo
+3"];
+H_Mouratidis[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="H.Mouratidis
+4"];
+L_Jiang[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="L.Jiang
+3"];
+S_Islam[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.Islam
+5"];
+J_Lockerbie[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="J.Lockerbie
+3"];
+K_Decreus[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="K.Decreus
+3"];
+G_Poels[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="G.Poels
+3"];
+S_Behnam[shape=ellipse,width=3.0,height=1.2,fixedsize = true, fontname="Helvetica", fontsize=30.0,label="S.Behnam
+3"];
+E_Letier -- A_Van_Lamsweerde[penwidth=11.100000000000001];
+L_Chung -- J_Mylopoulos[penwidth=4.7];
+L_Chung -- E_Yu[penwidth=4.7];
+J_Mylopoulos -- E_Yu[penwidth=11.100000000000001];
+L_Liu -- J_Mylopoulos[penwidth=4.7];
+L_Liu -- E_Yu[penwidth=7.9];
+P_Giorgini -- J_Mylopoulos[penwidth=9.5];
+P_Giorgini -- R_Sebastiani[penwidth=6.300000000000001];
+J_Mylopoulos -- R_Sebastiani[penwidth=6.300000000000001];
+L_Chung -- J_Leite[penwidth=4.7];
+L_Chung -- H_Wang[penwidth=6.300000000000001];
+J_Mylopoulos -- H_Wang[penwidth=3.1];
+H_Wang -- E_Yu[penwidth=3.1];
+S_Bleistein -- K_Cox[penwidth=6.300000000000001];
+R_Ali -- F_Dalpiaz[penwidth=6.300000000000001];
+R_Ali -- P_Giorgini[penwidth=6.300000000000001];
+F_Dalpiaz -- P_Giorgini[penwidth=9.5];
+D_Amyot -- J_Horkoff[penwidth=3.1];
+D_Amyot -- G_Mussbacher[penwidth=12.700000000000001];
+D_Amyot -- L_Peyton[penwidth=6.300000000000001];
+D_Amyot -- E_Yu[penwidth=3.1];
+J_Horkoff -- G_Mussbacher[penwidth=3.1];
+J_Horkoff -- L_Peyton[penwidth=3.1];
+J_Horkoff -- E_Yu[penwidth=9.5];
+G_Mussbacher -- L_Peyton[penwidth=3.1];
+G_Mussbacher -- E_Yu[penwidth=3.1];
+L_Peyton -- E_Yu[penwidth=3.1];
+J_Leite -- J_Mylopoulos[penwidth=12.700000000000001];
+J_Leite -- Y_Yu[penwidth=11.100000000000001];
+J_Mylopoulos -- Y_Yu[penwidth=19.1];
+J_Mylopoulos -- A_Perini[penwidth=3.1];
+J_Mylopoulos -- A_Susi[penwidth=3.1];
+A_Perini -- A_Susi[penwidth=7.9];
+W_Engelsman -- M_Van_Sinderen[penwidth=4.7];
+G_Elahi -- E_Yu[penwidth=6.300000000000001];
+P_Heymans -- R_Matulevi_ius[penwidth=6.300000000000001];
+A_Lapouchnian -- J_Mylopoulos[penwidth=14.3];
+A_Lapouchnian -- Y_Yu[penwidth=12.700000000000001];
+J_Kramer -- E_Letier[penwidth=3.1];
+J_Kramer -- S_Uchitel[penwidth=7.9];
+E_Letier -- S_Uchitel[penwidth=3.1];
+S_McIlraith -- J_Mylopoulos[penwidth=7.9];
+S_McIlraith -- Y_Wang[penwidth=3.1];
+S_McIlraith -- Y_Yu[penwidth=3.1];
+J_Mylopoulos -- Y_Wang[penwidth=6.300000000000001];
+Y_Wang -- Y_Yu[penwidth=6.300000000000001];
+N_Bencomo -- B_Cheng[penwidth=4.7];
+N_Bencomo -- P_Sawyer[penwidth=4.7];
+B_Cheng -- P_Sawyer[penwidth=4.7];
+D_Alrajeh -- J_Kramer[penwidth=6.300000000000001];
+D_Alrajeh -- A_Russo[penwidth=6.300000000000001];
+D_Alrajeh -- S_Uchitel[penwidth=6.300000000000001];
+J_Kramer -- A_Russo[penwidth=6.300000000000001];
+A_Russo -- S_Uchitel[penwidth=6.300000000000001];
+X_Franch -- N_Maiden[penwidth=3.1];
+A_Borgida -- N_Ernst[penwidth=6.300000000000001];
+A_Borgida -- I_Jureta[penwidth=6.300000000000001];
+A_Borgida -- J_Mylopoulos[penwidth=7.9];
+N_Ernst -- I_Jureta[penwidth=6.300000000000001];
+N_Ernst -- J_Mylopoulos[penwidth=6.300000000000001];
+I_Jureta -- J_Mylopoulos[penwidth=4.7];
+F_Dalpiaz -- J_Mylopoulos[penwidth=3.1];
+S_Liaskos -- S_McIlraith[penwidth=6.300000000000001];
+S_Liaskos -- J_Mylopoulos[penwidth=15.9];
+J_Leite -- A_Lapouchnian[penwidth=6.300000000000001];
+X_Franch -- A_Perini[penwidth=3.1];
+X_Franch -- A_Susi[penwidth=3.1];
+A_Lapouchnian -- S_Liaskos[penwidth=9.5];
+S_Liaskos -- Y_Yu[penwidth=9.5];
+A_Lapouchnian -- E_Yu[penwidth=3.1];
+S_Liaskos -- E_Yu[penwidth=3.1];
+E_Yu -- Y_Yu[penwidth=4.7];
+L_Chung -- S_Supakkul[penwidth=12.700000000000001];
+J_Leite -- S_Supakkul[penwidth=3.1];
+T_Topaloglou -- E_Yu[penwidth=3.1];
+J_Leite -- S_Liaskos[penwidth=4.7];
+J_Leite -- Y_Wang[penwidth=3.1];
+A_Lapouchnian -- Y_Wang[penwidth=4.7];
+S_Liaskos -- Y_Wang[penwidth=4.7];
+P_Massonet -- A_Van_Lamsweerde[penwidth=6.300000000000001];
+S_Easterbrook -- A_Lapouchnian[penwidth=3.1];
+S_Easterbrook -- S_Liaskos[penwidth=3.1];
+S_Easterbrook -- Y_Wang[penwidth=3.1];
+S_Easterbrook -- Y_Yu[penwidth=4.7];
+P_Massonet -- C_Ponsard[penwidth=4.7];
+C_Ponsard -- A_Van_Lamsweerde[penwidth=4.7];
+F_Alencar -- J_Castro[penwidth=12.700000000000001];
+F_Alencar -- M_Lucena[penwidth=9.5];
+F_Alencar -- E_Santos[penwidth=9.5];
+F_Alencar -- C_Silva[penwidth=11.100000000000001];
+J_Castro -- M_Lucena[penwidth=9.5];
+J_Castro -- E_Santos[penwidth=9.5];
+J_Castro -- C_Silva[penwidth=11.100000000000001];
+M_Lucena -- E_Santos[penwidth=9.5];
+M_Lucena -- C_Silva[penwidth=9.5];
+E_Santos -- C_Silva[penwidth=9.5];
+J_Almeida -- G_Guizzardi[penwidth=6.300000000000001];
+J_Almeida -- M_Van_Sinderen[penwidth=3.1];
+G_Guizzardi -- M_Van_Sinderen[penwidth=3.1];
+J_Trujillo -- J_Maz___n[penwidth=4.7];
+F_Alencar -- J_Pimentel[penwidth=7.9];
+J_Castro -- J_Pimentel[penwidth=9.5];
+M_Lucena -- J_Pimentel[penwidth=6.300000000000001];
+J_Pimentel -- E_Santos[penwidth=6.300000000000001];
+J_Pimentel -- C_Silva[penwidth=6.300000000000001];
+X_Peng -- Y_Yu[penwidth=6.300000000000001];
+X_Peng -- W_Zhao[penwidth=6.300000000000001];
+Y_Yu -- W_Zhao[penwidth=6.300000000000001];
+D_Amyot -- J_Ara___jo[penwidth=3.1];
+G_Mussbacher -- J_Ara___jo[penwidth=3.1];
+R_Ali -- L_Pasquale[penwidth=3.1];
+P_Heymans -- H_Mouratidis[penwidth=3.1];
+R_Matulevi_ius -- H_Mouratidis[penwidth=3.1];
+L_Jiang -- J_Mylopoulos[penwidth=6.300000000000001];
+L_Jiang -- E_Yu[penwidth=3.1];
+S_Islam -- H_Mouratidis[penwidth=6.300000000000001];
+J_Lockerbie -- N_Maiden[penwidth=6.300000000000001];
+K_Decreus -- G_Poels[penwidth=6.300000000000001];
+D_Amyot -- S_Behnam[penwidth=6.300000000000001];
+S_Behnam -- G_Mussbacher[penwidth=4.7];
+F_Alencar -- J_Ara___jo[penwidth=3.1];
+J_Castro -- J_Ara___jo[penwidth=3.1];
+C_Silva -- J_Ara___jo[penwidth=3.1];
+J_Leite -- L_Liu[penwidth=3.1];
+J_Leite -- E_Yu[penwidth=3.1];
+L_Liu -- Y_Yu[penwidth=3.1];
+J_Mylopoulos -- X_Peng[penwidth=3.1];
+J_Mylopoulos -- W_Zhao[penwidth=3.1];
+N_Ernst -- Y_Wang[penwidth=3.1];
+A_Borgida -- L_Jiang[penwidth=4.7];
+A_Borgida -- T_Topaloglou[penwidth=4.7];
+L_Jiang -- T_Topaloglou[penwidth=4.7];
+J_Mylopoulos -- T_Topaloglou[penwidth=4.7];
+J_Leite -- S_Easterbrook[penwidth=3.1];
+S_Easterbrook -- J_Mylopoulos[penwidth=3.1];
+X_Franch -- J_Trujillo[penwidth=3.1];
+J_Castro -- J_Mylopoulos[penwidth=3.1];
+J_Mylopoulos -- J_Pimentel[penwidth=3.1];
+S_Supakkul -- H_Wang[penwidth=4.7];
+S_Behnam -- L_Peyton[penwidth=3.1];
+D_Alrajeh -- A_Van_Lamsweerde[penwidth=3.1];
+J_Kramer -- A_Van_Lamsweerde[penwidth=3.1];
+A_Russo -- A_Van_Lamsweerde[penwidth=3.1];
+S_Uchitel -- A_Van_Lamsweerde[penwidth=3.1];
+I_Jureta -- A_Perini[penwidth=3.1];
+}
